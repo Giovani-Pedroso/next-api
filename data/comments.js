@@ -10,6 +10,10 @@ export const comments = [
     {
         id:3,
         text:"ccccccccccccccccccccccc"
+    },
+    {
+        id:4,
+        text:"dddddddddddddddddddddddd"
     }
     
-]
+];
