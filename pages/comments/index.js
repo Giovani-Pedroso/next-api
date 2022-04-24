@@ -20,9 +20,19 @@ export default function Comments(){
                                                     body:JSON.stringify({comment:comment}),
                                                     headers:{'Content-Type':'application/json'}
                                                 });
-        const data = response.json();
+        const data = await response.json();
         console.log(data);
         
+    }
+
+    const deleteComment = async (commentId)=>{
+      
+        const response = await fetch(`/api/comments/${commentId}`,{
+            method:"DELETE"});
+        const data = await response.json();
+        console.log(data);
+        fetchComments();
+            
     }
 
     return(
@@ -38,6 +48,7 @@ export default function Comments(){
                     return(
                         <div key={comment.id}>
                             <p>{comment.text}</p>
+                            <button onClick={()=>deleteComment(comment.id)}>Delete comment</button>
                             <hr/>
                         </div>
                     )
