@@ -1,0 +1,17 @@
++=Title: Using APIs on next
+
+* 1 - 
+
+First is necessary create a folder on the pages folder called api is there where we will store 
+ours APIs, this folder will act like the pages folder the index.js will be access in the 
+localhost://3000/api/, and the file must awalys export a function
+
+<js
+export default function handler(req, res){
+
+    
+}
+
+the convension is called this function handler and the function recive 2 arguments res and req 
+similar to express
+
